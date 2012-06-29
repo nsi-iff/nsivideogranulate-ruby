@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Douglas Camata"]
-  s.date = "2012-06-17"
+  s.date = "2012-06-29"
   s.description = "A simple gem to access a nsi.videogranulate node"
   s.email = "d.camata@gmail.com"
   s.extra_rdoc_files = [
@@ -29,6 +29,7 @@ Gem::Specification.new do |s|
     "lib/nsivideogranulate/configuration.rb",
     "lib/nsivideogranulate/errors.rb",
     "lib/nsivideogranulate/fake_server.rb",
+    "nsivideogranulate.gemspec",
     "spec/configuration_spec.rb",
     "spec/nsivideogranulate_spec.rb",
     "spec/spec_helper.rb"
