@@ -79,7 +79,7 @@ module NSIVideoGranulate
       if options[:video_link]
         insert_download_data options
       elsif options[:sam_uid] && options[:filename]
-        file_data = {:sam_uid => options[:sam_uid], :filename => options[:filename]}
+        file_data = {:video_uid => options[:sam_uid], :filename => options[:filename]}
         @request_data.merge! file_data
       elsif options[:file] && options[:filename]
         file_data = {:video => options[:file], :filename => options[:filename]}
