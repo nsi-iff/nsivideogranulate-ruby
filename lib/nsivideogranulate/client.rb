@@ -127,8 +127,23 @@ module NSIVideoGranulate
     # @raise NSIVideoGranulate::Errors::Client::KeyNotFoundError when an invalid key is provided
     #
     def grains_keys_for(video_key)
-      request = prepare_request :GET, {:video_key => video_key}.to_json
-      execute_request(request)
+      request = prepare_request :GET, {:video_key => video_key, :grains => true}.to_json
+      execute_request(request).select { |key| ['images', 'files'].include? key }
+    end
+
+    def thumbnail_key_for(video_key)
+      request = prepare_request :GET, {:video_key => video_key, :grains => true}.to_json
+      execute_request(request).select { |key| 'thumbnail' == key }
+    end
+
+    def audio_key_for(video_key)
+      request = prepare_request :GET, {:video_key => video_key, :grains => true}.to_json
+      execute_request(request).select { |key| 'audio' == key }
+    end
+
+    def converted_video_key_for(video_key)
+      request = prepare_request :GET, {:video_key => video_key, :grains => true}.to_json
+      execute_request(request).select { |key| 'converted_video' == key }
     end
 
     # Pre-configure the NSIVideoGranulate module with default params for the NSIVideoGranulate::Client
