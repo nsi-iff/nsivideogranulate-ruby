@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "nsivideogranulate"
-  s.version = "0.0.2"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Douglas Camata"]
-  s.date = "2012-06-29"
+  s.date = "2012-10-25"
   s.description = "A simple gem to access a nsi.videogranulate node"
   s.email = "d.camata@gmail.com"
   s.extra_rdoc_files = [
@@ -37,7 +37,7 @@ Gem::Specification.new do |s|
   s.homepage = "http://github.com/nsi-iff/nsivideogranulate-ruby.git"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = "1.8.21"
+  s.rubygems_version = "1.8.24"
   s.summary = "A simple gem to access a nsi.videogranulate node"
 
   if s.respond_to? :specification_version then
