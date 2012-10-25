@@ -131,9 +131,9 @@ module NSIVideoGranulate
       execute_request(request).select { |key| ['images', 'videos'].include? key }
     end
 
-    def thumbnail_key_for(video_key)
+    def thumbnails_keys_for(video_key)
       request = prepare_request :GET, {:video_key => video_key, :grains => true}.to_json
-      execute_request(request).select { |key| 'thumbnail' == key }
+      execute_request(request).select { |key| 'thumbnails' == key }
     end
 
     def audio_key_for(video_key)
